@@ -1,0 +1,12 @@
+# Predicting on test dataset
+y_pred = model.predict(X_test)
+
+# Calculate the Mean Absolute Error
+mae = mean_absolute_error(y_test, y_pred)
+print(f'Mean Absolute Error: {mae}')
+
+# Check if the MAE is under 3500
+if mae < 3500:
+    print("The model passes the challenge!")
+else:
+    print("The model does not pass the challenge.")
